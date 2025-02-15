@@ -29,11 +29,11 @@ const TestAsyncSocket = () => {
       </button>
       <div style={{ marginTop: 20 }}>
         <h2>응답</h2>
-        <pre>{JSON.stringify(response, null, 2)}</pre>
+        {response && <pre>{JSON.stringify(response, null, 2)}</pre>}
       </div>
       <div style={{ marginTop: 20 }}>
         <h2>에러</h2>
-        <pre>{JSON.stringify(error, null, 2)}</pre>
+        {error && <pre>{JSON.stringify(error, null, 2)}</pre>}
       </div>
     </div>
   )

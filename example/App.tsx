@@ -2,11 +2,12 @@ import React from 'react'
 import { initSocketConfig } from '@/config'
 import useInitSocket from '@/useInitSocket'
 import TestAsyncSocket from './TestAsyncSocket'
+import TestRealtimeSocket from './TestRealtimeSocket'
 
 initSocketConfig({
   websocketHost: 'ws://localhost:8080',
   parallelTrCodes: [],
-  errorCodes: [],
+  errorCodes: [-100],
   getAccount: () => 'testAccount',
   getAuthToken: () => 'testToken',
   removeSuspendedTrCode: (trCode: number) => {
@@ -29,6 +30,7 @@ const App = () => {
         connection logs.
       </p>
       <TestAsyncSocket />
+      <TestRealtimeSocket />
     </div>
   )
 }
