@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import useAsyncSocket from '@/useAsyncSocket'
+import { useAsyncSocket } from 'socket'
 
 const TestAsyncSocket = () => {
   // trCode와 handle은 여기서 지정 (useAsyncSocket 내부에서 config로 자동 추가됨)

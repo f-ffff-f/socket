@@ -1,6 +1,5 @@
 import React from 'react'
-import { initSocketConfig } from '@/config'
-import useInitSocket from '@/useInitSocket'
+import { initSocketConfig, useInitSocket } from 'socket'
 import TestAsyncSocket from './TestAsyncSocket'
 import TestRealtimeSocket from './TestRealtimeSocket'
 

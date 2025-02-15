@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import useRealTimeSocket from '@/useRealTimeSocket'
-import { ResponseBaseData } from '@/types'
-import { RealTimeSocket } from '@/lib/RealTimeSocket'
+import { useRealTimeSocket, RealTimeSocket, ResponseBaseData } from 'socket'
 
 class Controller extends RealTimeSocket<ResponseBaseData> {
   onResponse(response: ResponseBaseData) {
@@ -31,12 +29,12 @@ const TestRealtimeSocket = () => {
   }
 
   useEffect(() => {
-    controller.subscribe(response => {
+    controller.subscribe((response: ResponseBaseData) => {
       setResponse(response)
     })
 
     return () => {
-      controller.unsubscribe(response => {
+      controller.unsubscribe((response: ResponseBaseData) => {
         setResponse(null)
       })
     }
