@@ -1,7 +1,7 @@
 import React from 'react'
 import { initSocketConfig, useInitSocket } from 'socket'
 import TestAsyncSocket from './TestAsyncSocket'
-import TestRealtimeSocket from './TestRealtimeSocket'
+import TestRealtimeSocket from './TestRealTimeSocket'
 
 initSocketConfig({
   websocketHost: 'ws://localhost:8080',
